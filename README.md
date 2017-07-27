@@ -2,7 +2,9 @@
 
 WordPress Core PHPUnit Test Library made installable via Composer! Note the module will load the wp-config.php file and execute tests against the real database.
 
-See https://packagist.org/packages/emeraldjava/wordpress-tests-core
+See
+- https://github.com/emeraldjava/wordpress-tests-core
+- https://packagist.org/packages/emeraldjava/wordpress-tests-core
 
 ## Usage
 

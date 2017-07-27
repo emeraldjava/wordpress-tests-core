@@ -18,7 +18,9 @@
         "wiki": "https://codex.wordpress.org/",
         "source": "https://core.trac.wordpress.org/browser/trunk/tests/phpunit/includes"
     },
-    "require": {
-        "composer/installers": "^1.0"
+    "autoload": {
+        "classmap": [
+            "/"
+        ]
     }
 }

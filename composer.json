@@ -19,7 +19,6 @@
         "source": "https://core.trac.wordpress.org/browser/trunk/tests/phpunit/includes"
     },
     "require": {
-        "composer/installers": "^1.0",
-        "emeraldjava/wordpress-tests-core": "dev-master"
+        "composer/installers": "^1.0"
     }
 }

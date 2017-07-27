@@ -5,14 +5,14 @@
     "license": "GPL-2.0+",
     "authors": [
         {
-            "name": "WordPress Community",
+            "name": "emeraldjava",
             "homepage": "https://wordpress.org/about/"
-        },
-        {
-            "name": "Evan Mattson",
-            "email": "me@aaemnnost.tv"
         }
     ],
+    "repositories": [ {
+      "type":"vcs",
+      "url":"https://github.com/emeraldjava/wordpress-tests-core.git"
+    }],
     "support": {
         "issues": "https://core.trac.wordpress.org/",
         "wiki": "https://codex.wordpress.org/",
@@ -20,6 +20,6 @@
     },
     "require": {
         "composer/installers": "^1.0",
-        "aaemnnosttv/wordpress-tests-core-installer": "~0.1"
+        "emeraldjava/wordpress-tests-core": "dev-master"
     }
 }

@@ -1,7 +1,9 @@
 # WordPress Tests Core
 
 WordPress Core PHPUnit Test Library made installable via Composer!
- 
+
+NOTE - This will use the real database.
+
 ## Usage
 
 Example project's `composer.json`
@@ -11,12 +13,12 @@ Example project's `composer.json`
         "johnpbloch/wordpress": "*"
     },
     "require-dev": {
-        "aaemnnosttv/wordpress-tests-core": "*",
+        "emeraldjava/wordpress-tests-core": "dev-master",
         "phpunit/phpunit": "*"
     },
     "extra": {
-        "wordpress-install-dir": "web/wp",
-        "wordpress-tests-core-dir": "tests/core"
+        "wordpress-install-dir": "./../../",
+        "wordpress-tests-core-dir": "./tests"
     }
 }
 ```
@@ -32,7 +34,7 @@ Example project's `composer.json`
        ├── bootstrap.php
        ├── ...
 ```
-`tests/core` could be any directory, but it must be defined under the `extra` key as shown above. 
+`tests/core` could be any directory, but it must be defined under the `extra` key as shown above.
 
 #### `wp-tests-config.php`
 

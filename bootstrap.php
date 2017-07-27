@@ -11,12 +11,12 @@ if ( class_exists( 'PHPUnit\Runner\Version' ) ) {
 }
 
 $config_file_path = dirname( dirname( __FILE__ ) );
-if ( ! file_exists( $config_file_path . '/wp-tests-config.php' ) ) {
+if ( ! file_exists( $config_file_path . '/wp-config.php' ) ) {
 	// Support the config file from the root of the develop repository.
 	if ( basename( $config_file_path ) === 'phpunit' && basename( dirname( $config_file_path ) ) === 'tests' )
 		$config_file_path = dirname( dirname( $config_file_path ) );
 }
-$config_file_path .= '/wp-tests-config.php';
+$config_file_path .= '/wp-config.php';
 
 /*
  * Globalize some WordPress variables, because PHPUnit loads this file inside a function
@@ -25,7 +25,7 @@ $config_file_path .= '/wp-tests-config.php';
 global $wpdb, $current_site, $current_blog, $wp_rewrite, $shortcode_tags, $wp, $phpmailer, $wp_theme_directories;
 
 if ( ! is_readable( $config_file_path ) ) {
-	echo "ERROR: wp-tests-config.php is missing! Please use wp-tests-config-sample.php to create a config file.\n";
+	echo "ERROR: wp-config.php is missing! Please use wp-tests-config-sample.php to create a config file.\n";
 	exit( 1 );
 }
 require_once $config_file_path;
@@ -98,18 +98,18 @@ if(isset($GLOBALS['wp_tests_options'])) {
 require_once ABSPATH . '/wp-settings.php';
 
 // Delete any default posts & related data
-_delete_all_posts();
+//_delete_all_posts();
 
 require dirname( __FILE__ ) . '/testcase.php';
-require dirname( __FILE__ ) . '/testcase-rest-api.php';
-require dirname( __FILE__ ) . '/testcase-rest-controller.php';
-require dirname( __FILE__ ) . '/testcase-rest-post-type-controller.php';
-require dirname( __FILE__ ) . '/testcase-xmlrpc.php';
-require dirname( __FILE__ ) . '/testcase-ajax.php';
-require dirname( __FILE__ ) . '/testcase-canonical.php';
+//require dirname( __FILE__ ) . '/testcase-rest-api.php';
+//require dirname( __FILE__ ) . '/testcase-rest-controller.php';
+//require dirname( __FILE__ ) . '/testcase-rest-post-type-controller.php';
+//require dirname( __FILE__ ) . '/testcase-xmlrpc.php';
+//require dirname( __FILE__ ) . '/testcase-ajax.php';
+//require dirname( __FILE__ ) . '/testcase-canonical.php';
 require dirname( __FILE__ ) . '/exceptions.php';
 require dirname( __FILE__ ) . '/utils.php';
-require dirname( __FILE__ ) . '/spy-rest-server.php';
+//require dirname( __FILE__ ) . '/spy-rest-server.php';
 
 /**
  * A child class of the PHP test runner.
